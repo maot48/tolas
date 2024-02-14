@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>វត្តសំរោង</title>
+  <link rel="stylesheet" href="/Logowat.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #3e3e3e;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(0%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #23232a;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-family: khmer m1;
+    color: #000000;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #7c7b7b;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #434343;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .3s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #4f4e4e;
+    background-color: #fff;
+    color: #000000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2bae52;/*bar on web*/
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+    font-family: Khmer Moul;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #0a0a0b;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #4d3d3d;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+   .line504_text{
+  text-align: justify; 
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <!-- <a class="navbar-brand" href="#myPage">Logo</a> -->
+      <img src="/Logowat.png" class="navbar-brand" alt="" width="" height="3000%">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">ទំព័រដើម</a></li>
+        <li><a href="#band">ការបរិយាយ</a></li>
+        <li><a href="#tour">រូបភាពព្រឹត្តិការណ៍បុណ្យផ្សេងៗ</a></li>
+        <li><a href="#contact">ទំនាក់ទំនង</a></li>
+        <!-- <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul> -->
+        </li> 
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-ride="carousel"   >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="/mak.jpg" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="/w2.jpg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>មាឃបូជា</h3>
+          <p>មាឃបូជា ជាពីធីបុណ្យមួយដែលមានសារៈសំខាន់នៅក្នុងព្រះពុទ្ធសាសនា</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="/w3.jpg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>មាឃបូជា</h3>
+          <p>មាឃបូជា ជាពីធីបុណ្យមួយដែលមានសារៈសំខាន់នៅក្នុងព្រះពុទ្ធសាសនា</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="/wa.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>មាឃបូជា</h3>
+          <p>មាឃបូជា ជាពីធីបុណ្យមួយដែលមានសារៈសំខាន់នៅក្នុងព្រះពុទ្ធសាសនា</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3 style="font-family: khmer m1; font-size: 350%;">វត្តសំរោង</h3>
+  <p><em>សូមស្វាគមន៍</em></p>
+  <p align="justify">ព្រះវិហារដ៏ចំណាស់ ដែលមានអាយុកាលជាង៣០០ឆ្នាំ នៅវត្តសំរោងស្ថិតក្នុងភូមិសំរោងក្នុង ឃុំសូរភីក្នុង ស្រុកបាទី ខេត្តតាកែវ ត្រូវបានមន្ទីរវប្បធម៌ និង វិចិត្រសិល្បៈ ខេត្តតាកែវ កំពង់រៀបចំធ្វើការអភិរក្សទុកជាសម្បត្តិវប្បធម៌ ឬជាសម្បត្តិបេតិកភណ្ឌជាតិ ដើម្បីទាក់ទាញអ្នកទេសចរទៅទស្សនា និងស្រាវជ្រាវ។ តាមព័ត៌មានពីក្រសួងវប្បធម៌ និងវិចិត្រសិល្បៈបានឱ្យដឹងថា ក្រសួងចង់អភិរក្ស «ព្រះវិហារចាស់» ដែលមានអាយុកាលរាប់រយឆ្នាំនៅក្នុង វត្តសំរោងក្នុង ទុកជាសម្បត្តិវប្បធម៌ជាតិ ឬជាសម្បត្តិបេតិកភណ្ឌជាតិ ព្រោះវាមានសភាពចាស់ទ្រុឌទ្រោមណាស់ទៅហើយ ក្រែងមិនអាចនៅគង់វង្ស បើមិនបានថែទាំ ឬមិនបានជួសជុលឡើងវិញនៅផ្នែកខ្លះនោះទេ។ វត្តសំរោងក្នុង ស្ថិតក្នុង ភូមិសំរោងក្នុង ឃុំសំរោងក្នុង ស្រុកឯកភ្នំ ខេត្តបាត់ដំបង មានផ្ទៃដីទំហំ ២៩,៩៣៧ ម៉ែត្រក្រឡា កសាងនៅកំឡុងពុទ្ធសករាជ ២ ២៥០ គ្រឹស្ដសករាជ ១៧០៧ មកទល់ពេលនេះមានអាយុកាល ៣១១ ឆ្នាំហើយ ។ ដំបូងឡើយ វត្តសំរោងក្នុង គ្រាន់តែជាអាស្រមមួយនៅក្នុងព្រៃស្មសាននាសម័យនោះ ដែលរៀបដោយព្រះសង្ឃធុតង្គមួយអង្គព្រះនាម «ជ័យ»ប៉ុណ្ណោះ។ ជាបន្តបន្ទាប់មកព្រះអង្គបានកសាងព្រះវិហារដ៏ធំមួយធ្វើពីឈើ តែក្រោយមកបានសាងសង់ពីឥដ្ឋបូកបាយអ ប្រក់ក្បឿង សសរឈើ ហើយបានកសាងប្រាសាទផងដែរ ។ សំណង់ទាំងនេះមានបន្សល់ទុកនៅក្នុងបរិវេណវត្តសំរោងក្នុង ហើយបើគិតមកដល់បច្ចុប្បន្នសំណង់ព្រះវិហារចាស់នេះ មានអាយុកាល ៣១១ ឆ្នាំហើយ ។ នៅក្នុងឆ្នាំ១៩៧៥ ដល់ឆ្នាំ ១៩៧៩ វត្តសំរោងក្នុង បានក្លាយជាគុកសម្រាប់ដាក់អ្នកទោសក្នុងរបប «កម្ពុជាប្រជាធិបតេយ្យ» ។ ពួកខ្មែរក្រហមបានយកព្រះវិហារបុរាណនេះ ធ្វើជាកន្លែងឃុំឃាំង ធ្វើទារុណកម្ម និងជាកន្លែងសម្លាប់មនុស្សយ៉ាងសាហាវព្រៃផ្សៃបំផុត ។ គ្រប់ហេដ្ឋារចនាសម្ព័ន្ធទាំងអស់នៅក្នុងវត្តសំរោងក្នុងត្រូវបានបំផ្លាញទាំងស្រុង ដោយរបបខ្មែរក្រហម ។ ក្រោយថ្ងៃរំដោះ ៧ ខែមករា ឆ្នាំ១៩៧៩ ទាំងប្រជាពលរដ្ឋ ទាំងកងកម្លាំងប្រដាប់អាវុធគ្រប់លំដាប់ថ្នាក់ និងអាជ្ញាធរនាសម័យនោះ បានប្រឹងប្រែងរៀបចំវត្តសំរោងក្នុងឡើងវិញ ដើម្បីជាទីសក្ការបូជាសម្រាប់ពុទ្ធបរិស័ទ និងបានកសាងសមិទ្ធផលបន្តិច ម្ដងៗ រហូតប្រែក្លាយវត្តសំរោងក្នុង ដែលប្រឡាក់ដោយឈាមក្រហមច្រាលក្នុងរបបប៉ុល ពត ឱ្យទៅជាទីអារាមដ៏ល្បីល្បាញនៅក្នុងខេត្តបាត់ដំបង ប៉ុន្តែដោយឃើញព្រះវិហារបុរាណនេះមានសភាពទ្រុឌទ្រោមទើបមានគម្រោង ដាក់ជាបេតិកភណ្ឌជាតិ ដើម្បីទទួលបានការអភិរក្សឱ្យប្រសើរឡើងវិញ ៕</p>  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center" style="font-family: Kh Battambang;"><strong>សកម្មភាពបុណ្យភ្ជំ</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="/wa.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Guitarist and Lead Vocalist</p>
+        <p>Loves long walks on the beach</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"  style="font-family: Kh Battambang;"><strong>សកម្មភាពបុណ្យ</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="/w3.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Drummer</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"  style="font-family: Kh Battambang;"><strong>សកម្មភាពបុណ្យ</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="/wa.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Bass player</p>
+        <p>Loves math</p>
+        <p>Member since 2005</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Photo -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center" style="font-family: khemr moul;">កម្រងអនុស្សាវរី</h3>
+    <p class="text-center">ព្រះគ្រូចៅអធិការត្តសំរោង <br> ព្រះអង្គគ្រូកោសលមេធា ហោ ហ៊ុច</p>
+    <ul class="list-group">
+      <!-- <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li>  -->
+      <li class="list-group-item">ព្រឹត្តិការណ៍កម្មពិពីបុណ្យនានា<span class="badge">30</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/brken.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ២៤ ២០២៣</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/a.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/wa.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/w12.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/wa1.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w13.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w7.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យអកអំបុក</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/w5.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យអកអំបុក</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w6.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យអកអំបុក</strong></p>
+          <p>វិច្ឆិកា ៧៣ ២០២៣</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w9.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៤ ២០២៤</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w10.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៤ ២០២៤</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w11.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៤ ២០២៤</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w14.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៤ ២០២៤</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w16.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៤ ២០២៤</p>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="w15.jpg" alt="Paris" width="400" height="300">
+          <p><strong>បុណ្យកឋិនទាន</strong></p>
+          <p>វិច្ឆិកា ៧៤ ២០២៤</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center">
+  <h1 style="font-family: khmer moul;">វត្តសំរោង</h1>
+  <p>វត្តសំរោង ឃុំសូរភី ស្រុកបាទី ខេត្តតាកែវ</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="line504_text">
+      <h1>បុណ្យផ្ការ</h1><u></u>
+      <p> &nbsp;&nbsp;&nbsp;(វត្តសំរោង)៖ នៅកំឡុងពិធីបុណ្យចូលឆ្នាំប្រពៃណីចិន និងវៀតណាមនេះ បងប្អូនដែលជាជាជាតិចិន និងវៀតណាម ព្រមទាំងប្រជាជនខ្មែរជាប់សែស្រឡាយចិន បាននាំគ្នារៀបចំផ្ទះសម្បែង ក៏ដូចជាតាំងលម្អរផ្ទះនូវគ្រឿងរណ្ដាប់ផ្សេងៗដូចជា គោមក្រហម, ក្រដាសជូនពរឆ្នាំថ្មី ព្រមទាំងដើមរុក្ខជាតិជាច្រើនផងដែរ។
+
+        ក្នុងចំណោមគ្រឿងរណ្ដាប់ និងគ្រឿងលម្អរផ្ទះនានា ក្នុងពិធីបុណ្យចូលឆ្នាំប្រពៃណីចិន និងវៀតណាមនេះ ផ្កាអង្គារសិល្ប៍ គឺជារុក្ខជាតិម្យ៉ាងដែលតែងតែឃើញប្រជាជនចិន និងបងប្អូនប្រជាជនខ្មែរជាប់សែស្រឡាយចិន យកមកតាំងលម្អរក្នុងគេហដ្ឋាន និងតាមក្រុមហ៊ុន ឬកន្លែងរកស៊ីផ្សេងៗ។
+        
+        <li><b>តើមូលហេតុអ្វីបានជាផ្កាអង្គាសិល្ប៍ គេតែងតែយកមកតាំងលម្អរក្នុងគេហដ្ឋាន និងក្រុមហ៊ុនក្នុងថ្ងៃបុណ្យចូលឆ្នាំនេះ? ដោយឡែកសម្រាប់ដើមក្រូច និងដើមផ្កាស្បៃរឿងលឿងវិញ តើមានអត្ថន័យបែបណា?</b></li>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ទាក់ទិននឹងប្រវត្តិនៃការដាក់តាំងផ្កាអង្គាសិល្ប៍, ដើមក្រូច និងផ្កាស្បៃរឿង ក្នុងពិធីបុណ្យចូលឆ្នាំប្រពៃណីចិន-វៀតណាមនេះ ក៏ត្រូវបានលោកគ្រូ កុក ឡុង ជាគ្រូចិនសែដ៏ល្បីល្បាញនៅក្នុងទីក្រុងភ្នំពេញ បានពន្យល់យ៉ាងក្បោះក្បាយអំពីទំនៀមទម្លាប់នៃការតាំង ដើមផ្កាអង្គាសិល្ប៍ ការតាំងដើមក្រូច និងការតាំងផ្កាស្បែករឿងនេះ តាមប្រពៃណីចិន។
+        
+        លោកគ្រូចិនសែ កុក ឡុង បានឲ្យដឹងថា «នៅចិនក្នុងរដូវរងារផ្កាអង្គាសិល្ប៍នេះ កាន់តែរីកដែលជាការបង្ហាញ ពីភាពតស៊ូដោយមិនរាថយទោះបីជារងារខ្លាំងយ៉ាងណាក៏ដោយ ហើយមួយវិញទៀតផ្កាអង្គាសិល្ប៍នេះ ត្រូវបានមេដឹកនាំបដិវត្តន៍ចិន ម៉ៅ សេទុង ចូលចិត្តខ្លាំងបំផុត»។
+        
+        លោកគ្រូបន្ដថា ផ្កាអង្គាសិល្ប៍នេះចិនត្រូវតែដាក់តាំងក្នុងពិធី ហើយសម្រាប់ចិននៅស្រុកខ្មែរ គឺត្រូវតែមានតាំងលម្អរ កាន់តែល្អគឺទិញចំថ្ងៃទី២៤ ដែលជាថ្ងៃសែនធំ ហើយកាន់តែល្អទៀតនោះ គឺត្រូវឲ្យរីកបាន៣ថ្ងៃ។
+        
+        លោកគ្រូបានបន្ដថា «ប្រសិនបើផ្កាអង្គាសិល្ប៍នេះ រីករហូតដល់រយៈពេល៣ថ្ងៃ គឺឆ្នាំនេះយីអ៊ុនល្អ។ ដោយឡែកសម្រាប់ការតាំងផ្លែក្រូវិញ តាមចិនគឺមានន័យថា ក្រូចគឺជាសំណាង បង្ហាញថាមានភាពសុខសាន្ដ... តាមចិនផ្លែឈើដែលត្រូវដាក់សែន គឺត្រូវតែមានអត្ថន័យល្អ ប្រសិនបើផ្លែឈើហូបបាន តែអត្ថន័យមិនល្អ ចិននឹងយកមកសែនក្នុងពិធីឡើយ»។
+        
+        លោកគ្រូក៏បានពន្យល់ពីអត្ថន័យផ្កាស្បៃរឿងថា បើតាមចិនផ្កាស្បៃរឿងនេះ គឺដាក់តាមចំណង់ចំណូលចិត្ត ប៉ុន្ដែនៅស្រុកខ្មែរវិញ សារតែផ្កានេះមានព័ណ៌លឿន ដូចគ្នាទៅនឹងផ្កាអង្គាសិល្ប៍ មួយវិញទៀតអ្នកខ្លះទិញមក អង្គាសិល្ប៍រីកមុន ឬរោយអស់ ប៉ុន្ដែផ្កាស្បៃរឿងពណ៌លឿងទុកបានយូរ ដូច្នេះហើយបានជាខ្មែរកាត់ចិន តែងតែទិញយកមកដាក់តាំងក្នុងពិធី។
+        
+        ក្រឡែកមកមើលបងប្អូនប្រជាពលរដ្ឋ ដែលជាអាជីវករលក់ដូរក៏បាន និងកំពុងញាប់ដៃញាប់ជើង ក្នុងការប្រកបអាជីវកម្មរបស់ខ្លួន។ ជាក់ស្ដែងអាជីវករ លក់ផ្កាអង្គារសិល្ប៍ នៅម្ដុមវត្តទឹកថ្លា, វត្តសំពៅមាស និងនៅម្ដុំផ្សារដីហុយក៏មមាញឹកខ្លាំង ក្នុងការប្រកបអាជីវកម្មរបស់ខ្លួនផងដែរ។
+        
+        ឆ្នាំនេះក៏មិនខុសពីរាល់ឆ្នាំដែរ ប្រជាពលរដ្ឋបាននាំគ្នាទៅជាវផ្កាអង្គាសិល្ប៍ ដើម្បីយកទៅរៀបចំក្នុងពិធី ដែលធ្វើឲ្យការលក់ដូចនៅតែមានសន្ទុះ។
+        
+        កំពុងតែបាញ់ទឹកដាក់ផ្កាបណ្ដើរ ស្រែកហៅអតិថិជនឲ្យជួយទិញបណ្ដើរ លោក លុយ គីមហួរ អាជីវករលក់ផ្កាអង្គាសិល្ប៍ក្បែវត្តសំពៅមាសឲ្យដឹងថា ការលក់ផ្កាអង្គាសិល្ប៍ក្នុងឆ្នាំនេះ មានភាពធម្មតាដូចការលក់ជារៀងរាល់ឆ្នាំដែរ។ ដោយចាប់ផ្ដើមលក់ពីថ្ងៃទី១៩ ខែមករារហូតមក។
+        
+        លោកបានបន្ដថា «សម្រាប់ឆ្នាំនេះខ្ញុំចំណាយទុនប្រមាណ៦ពាន់ដុល្លារ នាំយកផ្កាអង្កាសិល្ប៍មកលក់។ ឆ្នាំនេះការលក់ក៏មិនរំពឹងចំណេញប៉ុន្មានទេ តែអាចរំពឹងថានឹងរួចខ្លួន ព្រោះឆ្នាំនេះផ្ការីកមុនថ្ងៃចូលឆ្នាំ ដោយការរីកមុនថ្ងៃបែបនេះ ត្រូវលក់ចេញមានតម្លៃធូរ»។
+        
+        លោកបន្ថែមថា ជារៀងរាល់ឆ្នាំការលក់ផ្កាអង្គាសិល្ប៍នេះ អាចចំណេញប្រមាណ២-៣ពាន់ដុល្លារ ក្នុងមួយរដូវនៃការលក់។
+        
+        ងាកទៅមើលអាជីវករលក់ ក្នុងវត្តទឹកថ្លាវិញឃើញថា ក៏មានការមមាញឹកខ្លាំងណាស់ដែរ ដោយមានអតិថិជនហូរហែរចុះសួរតម្លៃផ្កា។ កំពុងលក់បណ្ដើរអ្នកស្រី លក្ខិណា បានឲ្យដឹងថា ឆ្នាំនេះបានចំណាយទុន២ពាន់ដុល្លារ យកផ្កាអង្គាសិល្ប៍មកលក់ច្រើនជាងឆ្នាំមុន ដោយយកមករហូតដល់៧៥បាច់ ដោយមាន១៥០ដើម ខណៈឆ្នាំមុនមានហ៊ានយកត្រឹមតែ៥០បាច់ប៉ុណ្ណោះ។
+        
+        អ្នកស្រីបានបន្ដថា អ្នកលក់ផ្កាអង្គាសិល្ប៍នៅម្ដុំទឹកថ្លា គឺមិនដែលលក់សល់ឡើយ គឺលក់ដាច់រហូតដល់ថ្ងៃចូលឆ្នាំចិន ក៏នៅតែមានអ្នកទិញ។
+        
+        អ្នកស្រីបញ្ជាក់ទៀតថា «ឆ្នាំនេះមិនរំពឹងចំណេញប៉ុន្មានទេ ព្រោះផ្ការីកច្រើន ប៉ុន្ដែប្រសិនបើមានអ្នកទិញផ្ការីកនេះ នឹងមានលុយចំណេញខ្ទង់៤-៥រយដុល្លារ តែខ្ញុំនៅតែរំពឹងថា ផ្កាអង្គាសិល្ប៍នៅតែលក់អស់ ទោះបីមិនចំណេញច្រើនក៏បានរួចខ្លួន និយាយឲ្យចំទៅផ្កាមិនដែលនៅសល់ឡើយ មានតែផ្កាដែលមិនចេញ ឬងាប់ប៉ុណ្ណោះដែលនៅសល់»។
+        
+        សូមជម្រាបថា អាជីវកម្មលក់ផ្កាអង្គាសិល្ប៍ មានលក់នៅ៤កន្លែងធំៗ នៅក្នុងទីក្រុងភ្នំពេញរួមមាន៖ ជុំវិញវត្តសំពៅមាស, ក្បែរវត្តទឹកថ្លា, លើផ្លូវរទេះភ្លើងផ្សារដីហុយ និងនៅត្រោយម្ខាងជ្រោយចង្វារ ដែលជាទីតាំងលក់ផ្កាអង្គាសិល្ប៍ធំៗ ក្នុងទីក្រុងភ្នំពេញ។
+        
+        អ្នកស្រី ស៊ីថា លក់នៅលើផ្លូវរទេះភ្លើងផ្សារដីហុយឲ្យដឹងថា ក្នុងឆ្នាំនេះបាននាំផ្កា១០០បាច់ មកលក់បន្ដដោយបានចំណាយទុន ប្រមាណជាង២ពាន់ដុល្លារ ហើយរហូតមកដល់ថ្ងៃនេះ លក់បានចំណូលប្រមាណ១ពាន់ដុល្លារហើយដែរ។
+        
+        អ្នកស្រីបន្ដថា «ឆ្នាំនេះមិនសូវជារំពឹងចំណេញប៉ុន្មានទេ តែរំពឹងរួចខ្លួន»។
+        
+        ងាកត្រឡប់មកមើលប្រជាជនជនវិញ ក៏នៅតែមានការឃ្មាតខ្មី ក្នុងការទិញផ្កាអង្គាសិល្ប៍, ស្បៃរឿង និងដើមក្រូច ដើម្បីយកមកដាក់តាំងក្នុងកម្មវិធី ដែលជាទំនៀមទម្លាប់តាំងពីដូនតា និងមានជំនឿនថា ការតាំងផ្កាទាំងនេះនាំមកនូវសុខសុភមង្គ និងភាពសុខសប្បាយរុងរឿងពេញមួយឆ្នាំ៕</p>
+
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>បង្កើតឡើងដោយ<a href="https://web.facebook.com" data-toggle="tooltip" title=">www.ម៉ៅ តុលា.com">www.ម៉ៅ តុលា.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+    $('.carousel').carousel({
+        interval: 2000
+    })
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
